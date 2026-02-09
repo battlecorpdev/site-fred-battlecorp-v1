@@ -1,26 +1,363 @@
-import type { TranslationKeys } from "./fr";
+export interface TranslationKeys {
+  meta: {
+    title: string;
+    description: string;
+  };
+  nav: {
+    home: string;
+    whitepaper: string;
+    wiki: string;
+    support: string;
+    login: string;
+    signup: string;
+    logout: string;
+    dashboard: string;
+  };
+  header: {
+    brand: string;
+    menuOpen: string;
+    links: string;
+    social: string;
+  };
+  footer: {
+    rights: string;
+    links: {
+      whitepaper: string;
+      wiki: string;
+      support: string;
+      discord: string;
+      facebook: string;
+    };
+    legal: {
+      terms: string;
+      cookies: string;
+      privacy: string;
+    };
+    sections: {
+      links: string;
+      social: string;
+      legal: string;
+    };
+  };
+  home: {
+    sections: {
+      hero: {
+        badge: string;
+        titlePart1: string;
+        titlePart2: string;
+        tagline: string;
+        quote: string;
+        quoteAttribution: string;
+        cta: string;
+        ctaSecondary: string;
+      };
+      howToPlay: {
+        eyebrow: string;
+        title: string;
+        accentWord: string;
+        subtitle: string;
+        imageAlt: string;
+        tacticalAdvice: {
+          label: string;
+          quotes: string[];
+        };
+        navigation: {
+          previous: string;
+          next: string;
+        };
+        steps: {
+          title: string;
+          description: string;
+          details: string[];
+        }[];
+        resources: {
+          title: string;
+          items: string[];
+        };
+        cta: string;
+      };
+      pillars: {
+        eyebrow: string;
+        title: string;
+        accentWord: string;
+        subtitle: string;
+        items: {
+          id: string;
+          title: string;
+          tagline: string;
+          category: string;
+          bullets: string[];
+          takeaway: string;
+          cta: string;
+        }[];
+        takeawayLabel: string;
+        stepLabel: string;
+        navHint: string;
+        statusLabel: string;
+        visualPreview: string;
+        mobile: {
+          expand: string;
+          collapse: string;
+          swipeHint: string;
+        };
+      };
+      units: {
+        eyebrow: string;
+        title: string;
+        accentWord: string;
+        subtitle: string;
+        roles: {
+          offensive: string;
+          defensive: string;
+        };
+        labels: {
+          melee: string;
+          ranged: string;
+          defense: string;
+          resistance: string;
+          na: string;
+        };
+        categories: {
+          infantry: string;
+          mechanical: string;
+          aerial: string;
+        };
+        buildingNames: {
+          academy: string;
+          factory: string;
+          spaceport: string;
+        };
+        abilities: {
+          stealthAttack: string;
+          preMeleeShot: string;
+          barrage: string;
+          bombing: string;
+        };
+        list: {
+          id: string;
+          name: string;
+          slogan: string;
+          building: "academy" | "factory" | "spaceport";
+          category: "infantry" | "mechanical" | "aerial";
+          role: "offensive" | "defensive";
+          stats: {
+            melee: number;
+            ranged: number | null;
+            defense: number;
+            resistance: number;
+          };
+          production: number;
+          fabrication: { resource: string; amount: number }[];
+          maintenance: { resource: string; amount: number }[];
+          ability: string | null;
+        }[];
+        production: {
+          label: string;
+          unit: string;
+        };
+        costs: {
+          fabrication: string;
+          maintenance: string;
+        };
+        resources: {
+          credits: string;
+          food: string;
+          energy: string;
+          steel: string;
+          titanium: string;
+          aluminum: string;
+          component: string;
+        };
+        sections: {
+          characteristics: string;
+          production: string;
+          costs: string;
+          specialAbility: string;
+          none: string;
+        };
+        mobile: {
+          expand: string;
+          collapse: string;
+          swipeHint: string;
+        };
+      };
+      victory: {
+        eyebrow: string;
+        title: string;
+        accentWord: string;
+        subtitle: string;
+        pathLabel: string;
+        expandPath: string;
+        collapsePath: string;
+        paths: {
+          id: string;
+          title: string;
+          tag: string;
+          category: string;
+          description: string;
+          steps: string[];
+        }[];
+        mobile: {
+          swipeHint: string;
+        };
+      };
+      community: {
+        eyebrow: string;
+        title: string;
+        accentWord: string;
+        subtitle: string;
+        channelsTitle: string;
+        resourcesTitle: string;
+        kpi: {
+          players: { value: string; label: string };
+          games: { value: string; label: string };
+          territories: { value: string; label: string };
+          betaDays: { value: string; label: string };
+        };
+        discord: {
+          title: string;
+          live: string;
+          description: string;
+          cta: string;
+          features: string[];
+          channels: string[];
+          resources: string[];
+          moderation: string;
+        };
+      };
+      cta: {
+        eyebrow: string;
+        title: string;
+        subtitle: string;
+        ctaPrimary: string;
+        ctaSecondary: string;
+        proofs: string[];
+      };
+    };
+  };
+  auth: {
+    login: {
+      title: string;
+      subtitle: string;
+      email: string;
+      password: string;
+      submit: string;
+      noAccount: string;
+      createAccount: string;
+      forgotPassword: string;
+    };
+    signup: {
+      title: string;
+      subtitle: string;
+      username: string;
+      email: string;
+      password: string;
+      confirmPassword: string;
+      submit: string;
+      hasAccount: string;
+      signIn: string;
+      acceptTerms: string;
+    };
+  };
+  authShell: {
+    title: string;
+    description: string;
+    phase: string;
+    backHome: string;
+    openDiscord: string;
+  };
+  app: {
+    title: string;
+    description: string;
+    phase: string;
+    backHome: string;
+    openDiscord: string;
+  };
+  notFound: {
+    code: string;
+    title: string;
+    backHome: string;
+  };
+  validation: {
+    required: string;
+    invalidEmail: string;
+    minLength8: string;
+    passwordMismatch: string;
+    minLength3: string;
+  };
+  common: {
+    loading: string;
+    error: string;
+    success: string;
+    cancel: string;
+    confirm: string;
+    save: string;
+    delete: string;
+    edit: string;
+    back: string;
+    next: string;
+    previous: string;
+    retry: string;
+    empty: string;
+    close: string;
+  };
+  ui: {
+    languageSwitch: {
+      fr: string;
+      en: string;
+    };
+    theme: {
+      light: string;
+      dark: string;
+      system: string;
+    };
+  };
+  legal: {
+    terms: {
+      title: string;
+      lastUpdate: string;
+      intro: string;
+      body: string;
+    };
+    cookies: {
+      title: string;
+      lastUpdate: string;
+      intro: string;
+      body: string;
+    };
+    privacy: {
+      title: string;
+      lastUpdate: string;
+      intro: string;
+      body: string;
+    };
+  };
+}
 
 export const en: TranslationKeys = {
   meta: {
     title: "BattleCorp - Cyberpunk Strategy Game",
-    description: "Dive into the cyberpunk universe of BattleCorp. Strategy, combat, and corporations in a futuristic world.",
+    description: "Enter the cyberpunk world of BattleCorp. Strategy, warfare and corporations in a ruthless futuristic conflict.",
   },
+
   nav: {
     home: "Home",
     whitepaper: "Whitepaper",
     wiki: "Wiki",
     support: "Support",
-    login: "Login",
-    signup: "Sign Up",
-    logout: "Logout",
+    login: "Log in",
+    signup: "Sign up",
+    logout: "Log out",
     dashboard: "Dashboard",
   },
+
   header: {
     brand: "BATTLECORP",
     menuOpen: "Open menu",
     links: "Links",
     social: "Social",
   },
+
   footer: {
     rights: "All rights reserved",
     links: {
@@ -41,284 +378,212 @@ export const en: TranslationKeys = {
       legal: "Legal",
     },
   },
+
   home: {
     sections: {
+
       hero: {
-        badge: "OPEN BETA — WARGAME AVAILABLE",
+        badge: "PLAYTEST — WARGAME AVAILABLE",
         titlePart1: "BATTLE",
         titlePart2: "CORP",
-        tagline: "Lead a corporation and dominate your rivals.",
-        quote: '"A city is built. A planet is conquered."',
+        tagline: "War is an industry. Make it yours.",
+        quote: "« A city is built. A planet is conquered. »",
         quoteAttribution: "— Operations Manual, Internal Directive",
-        cta: "JOIN THE BETA",
-        ctaSecondary: "WATCH THE DEMO",
+        cta: "JOIN THE PLAYTEST",
+        ctaSecondary: "VIEW DEMO",
       },
+
       howToPlay: {
-        eyebrow: "GAMEPLAY LOOP",
+        eyebrow: "GAMEPLAY",
         title: "How to Play",
         accentWord: "Play",
-        subtitle: "Master cycles, manage resources, project power.",
+        subtitle: "Build your base, fuel your industry, and project your forces to conquer the planet.",
         imageAlt: "Cyberpunk base",
+
         tacticalAdvice: {
           label: "TACTICAL ADVICE",
           quotes: [
-            '"Your HQ is your Achilles heel. Lose it, and the game is over."',
-            '"A taxpayer paying is worth ten workers without credits."',
-            '"The best-supplied army wins the war, not the battle."',
-            '"Barrage before attacking. Bomb before barraging."',
+            "« Your HQ is your nerve center. Lose it and the war is over. »",
+            "« One productive worker is worth more than ten idle taxpayers. »",
+            "« The best supplied army wins the war, not the battle. »",
+            "« Shell. Bomb. Then invade. »",
           ],
         },
+
         navigation: {
           previous: "Previous",
           next: "Next",
         },
+
         steps: [
           {
-            title: "Establish your base",
-            description: "Protect your command center — its loss means immediate elimination.",
+            title: "Secure your base",
+            description: "Your HQ is your vital point. Losing it means immediate elimination.",
             details: [
-              "Starting territory = elimination if lost",
-              "Invest in defense as much as offense",
-              "Bunkers and garrisons to protect your base",
+              "Starting territory = defeat if captured",
+              "Invest in diplomacy, defenses and garrisons",
+              "Anticipate enemy strikes with surveillance and protection",
             ],
           },
           {
-            title: "Develop your territories",
-            description: "Each territory brings population, resources and essential strategic positions.",
+            title: "Expand territorial control",
+            description: "Every conquered territory increases your population, resources and industrial capacity.",
             details: [
-              "4 types: Starting, Government, Neutral, Standard",
-              "Population = workers vs taxpayers",
-              "2 to 6 buildable zones per territory",
+              "Resource extraction: steel, uranium, titanium, aluminum",
+              "4,000 to 8,000 inhabitants available for production",
+              "2 to 6 slots to build infrastructures and defenses",
             ],
           },
           {
             title: "Produce & maintain",
-            description: "Energy, components, troops — optimize your production chain for war.",
+            description: "Sustain your economy to supply troops, facilities and military operations.",
             details: [
-              "6 resources: credits, energy, food, steel, components, titanium",
-              "Buildings: Academy, Mechanical Factory, Spaceport",
-              "12-phase production cycles",
+              "Strategic resources to balance at all times",
+              "Academies train, factories build, spaceports deploy",
+              "Logistics resolved every 12 phases — plan ahead or fall behind",
             ],
           },
           {
             title: "Project force",
-            description: "Piloting, air strikes, ground invasion — take the advantage on the map.",
+            description: "Deploy your Battlecorp’s military power to crush all planetary resistance.",
             details: [
-              "Ground attack: 6 phases",
-              "Artillery barrage: 3 phases",
-              "Air bombing: 3 phases",
+              "Ground columns: capture and secure zones (6 phases)",
+              "Artillery: long-range suppression (3 phases)",
+              "Air wings: tactical bombing and rapid strikes (3 phases)",
             ],
           },
         ],
+
         resources: {
           title: "Resources to manage",
           items: ["Credits", "Food", "Energy", "Influence", "Steel", "Components"],
         },
-        cta: "View Wiki",
+
+        cta: "Open the Wiki",
       },
+
       pillars: {
-        eyebrow: "GAME MECHANICS",
-        title: "4 Pillars to Dominate the Planet",
-        accentWord: "Dominate",
-        subtitle: "Four pillars to gain — and keep — the edge.",
+        eyebrow: "STRATEGY",
+        title: "4 levers to dominate the planet",
+        accentWord: "dominate",
+        subtitle: "Master these principles to gain the advantage… and never lose it.",
+
         items: [
           {
-            id: "conquest",
-            title: "Planetary Conquest",
-            tagline: "Every territory counts.",
-            category: "Strategy / Macro",
+            id: "tempo",
+            title: "Control the tempo",
+            tagline: "Plan faster than your rivals.",
+            category: "Decision / Timing",
             bullets: [
-              "Control zones to access resources and extend your influence.",
-              "Borders are never stable — adapt or lose ground.",
-              "Government territories offer major strategic bonuses — target them first.",
+              "Every action resolves in phases — plan several cycles ahead.",
+              "The LOCK system prevents rewinds.",
+              "Logistics delays are paid for on the front line.",
             ],
-            takeaway: "Whoever controls the map dictates the tempo of the game.",
-            cta: "View sheet (Codex)",
+            takeaway: "Whoever sets the pace controls the war.",
+            cta: "View entry (Codex)",
           },
           {
             id: "economy",
-            title: "War Economy",
-            tagline: "Convert resources → power.",
-            category: "Production / Logistics",
+            title: "Economic superiority",
+            tagline: "Convert resources into power.",
+            category: "Industry / Logistics",
             bullets: [
-              "Manage credits, food, energy and components to fuel your war machine.",
-              "An economic imbalance can doom you before the first fight.",
-              "Every worker counts: balance your population between production and tax revenue.",
+              "More resources = more units = more tactical options.",
+              "Economic deficits halt expansion.",
+              "Optimize workers, infrastructure and output.",
             ],
-            takeaway: "The best-supplied army wins the war, not the battle.",
-            cta: "View sheet (Codex)",
+            takeaway: "The best supplied army wins the war.",
+            cta: "View entry (Codex)",
           },
           {
-            id: "cycles",
-            title: "Cycles & LOCK",
-            tagline: "Decide fast, play faster.",
-            category: "Tempo / Decision",
+            id: "pressure",
+            title: "Military pressure",
+            tagline: "Never let the enemy breathe.",
+            category: "Offense / Map control",
             bullets: [
-              "The game advances by cycles — each phase imposes strategic choices under time pressure.",
-              "The LOCK system prevents backtracking: own your decisions.",
-              "12 phases per cycle — plan your military and economic actions several turns ahead.",
+              "Apply constant strikes and threats to force mistakes.",
+              "Disrupt enemy production lines.",
+              "Relentless pressure beats isolated assaults.",
             ],
-            takeaway: "Hesitation is already losing. Decision speed is an advantage.",
-            cta: "View sheet (Codex)",
+            takeaway: "Hesitation means defeat. Pressure breaks defenses.",
+            cta: "View entry (Codex)",
           },
           {
-            id: "hq",
-            title: "Command Center",
-            tagline: "Protect your base. Or lose everything.",
-            category: "Defense / Survival",
+            id: "survival",
+            title: "HQ survival",
+            tagline: "Lose your base, lose everything.",
+            category: "Defense / Priority",
             bullets: [
-              "Your HQ is your most vulnerable point — its destruction means elimination.",
-              "Invest in its defense as much as in your offensives.",
-              "Bunkers, garrisons and defensive units: diversify your protection layers.",
+              "Your Command Center is the primary target.",
+              "Invest as much in defense as you do in expansion.",
+              "A strong base enables bold offensives.",
             ],
-            takeaway: "Conquering without protecting is building on sand.",
-            cta: "View sheet (Codex)",
+            takeaway: "Conquer without protection and you build on sand.",
+            cta: "View entry (Codex)",
           },
         ],
-        takeawayLabel: "Takeaway",
+
+        takeawayLabel: "Key takeaway",
         stepLabel: "STEP",
-        navHint: "Select a pillar to learn more",
-        statusLabel: "PILLAR",
+        navHint: "Select a lever to learn more",
+        statusLabel: "LEVER",
         visualPreview: "VISUAL PREVIEW",
+
         mobile: {
-          expand: "View key takeaway",
+          expand: "View key point",
           collapse: "Collapse",
-          swipeHint: "Swipe to see other pillars",
+          swipeHint: "Swipe to see other levers",
         },
       },
+
       units: {
-        eyebrow: "PRODUCTION & PROJECTION",
+        eyebrow: "PRODUCTION & DEPLOYMENT",
         title: "Combat Units",
         accentWord: "Combat",
         subtitle: "Every unit has a role. Every choice has a cost.",
+
         roles: {
           offensive: "Offensive",
           defensive: "Defensive",
         },
+
         labels: {
           melee: "Melee",
           ranged: "Ranged",
           defense: "Defense",
           resistance: "Resistance",
-          na: "NA",
+          na: "N/A",
         },
+
         categories: {
           infantry: "Infantry",
           mechanical: "Mechanical",
           aerial: "Aerial",
         },
+
         buildingNames: {
           academy: "Military Academy",
           factory: "Mechanical Factory",
           spaceport: "Spaceport",
         },
+
         abilities: {
-          stealthAttack: "Stealth Attack",
-          preMeleeShot: "Pre-Melee Shot",
+          stealthAttack: "Stealth attack",
+          preMeleeShot: "Pre-melee shot",
           barrage: "Barrage",
           bombing: "Bombing",
         },
-        list: [
-          {
-            id: "marine",
-            name: "Marine",
-            slogan: "First to enter. Last to leave.",
-            building: "academy",
-            category: "infantry",
-            role: "defensive",
-            stats: { melee: 1, ranged: null, defense: 4, resistance: 1 },
-            production: 20,
-            fabrication: [{ resource: "credits", amount: 100 }],
-            maintenance: [{ resource: "food", amount: 1 }],
-            ability: null,
-          },
-          {
-            id: "commando",
-            name: "Commando",
-            slogan: "Where defense reassures, the Commando finishes.",
-            building: "academy",
-            category: "infantry",
-            role: "offensive",
-            stats: { melee: 10, ranged: null, defense: 2, resistance: 2 },
-            production: 7,
-            fabrication: [{ resource: "credits", amount: 250 }, { resource: "component", amount: 1 }],
-            maintenance: [{ resource: "food", amount: 1 }, { resource: "energy", amount: 1 }],
-            ability: "stealthAttack",
-          },
-          {
-            id: "cyborg",
-            name: "Cyborg",
-            slogan: "When flesh hesitates, steel executes.",
-            building: "factory",
-            category: "mechanical",
-            role: "offensive",
-            stats: { melee: 3, ranged: null, defense: 3, resistance: 3 },
-            production: 40,
-            fabrication: [{ resource: "credits", amount: 10 }, { resource: "component", amount: 1 }],
-            maintenance: [{ resource: "energy", amount: 1 }],
-            ability: null,
-          },
-          {
-            id: "tank",
-            name: "Tank",
-            slogan: "You don't argue with armor.",
-            building: "factory",
-            category: "mechanical",
-            role: "offensive",
-            stats: { melee: 10, ranged: 4, defense: 5, resistance: 5 },
-            production: 7,
-            fabrication: [{ resource: "credits", amount: 500 }, { resource: "steel", amount: 10 }],
-            maintenance: [{ resource: "energy", amount: 5 }],
-            ability: "preMeleeShot",
-          },
-          {
-            id: "artillery",
-            name: "Artillery",
-            slogan: "The front advances when the rear decides.",
-            building: "factory",
-            category: "mechanical",
-            role: "offensive",
-            stats: { melee: 1, ranged: 20, defense: 1, resistance: 1 },
-            production: 5,
-            fabrication: [{ resource: "credits", amount: 1000 }, { resource: "titanium", amount: 5 }],
-            maintenance: [{ resource: "energy", amount: 10 }],
-            ability: "barrage",
-          },
-          {
-            id: "bomber",
-            name: "Bomber",
-            slogan: "On the ground, we fight. In the air, we cut.",
-            building: "spaceport",
-            category: "aerial",
-            role: "offensive",
-            stats: { melee: 1, ranged: 20, defense: 1, resistance: 2 },
-            production: 5,
-            fabrication: [{ resource: "credits", amount: 500 }, { resource: "aluminum", amount: 5 }, { resource: "steel", amount: 5 }],
-            maintenance: [{ resource: "energy", amount: 2 }],
-            ability: "bombing",
-          },
-          {
-            id: "fighter",
-            name: "Fighter",
-            slogan: "The sky is a frontier. We close it.",
-            building: "spaceport",
-            category: "aerial",
-            role: "offensive",
-            stats: { melee: 5, ranged: 2, defense: 5, resistance: 5 },
-            production: 10,
-            fabrication: [{ resource: "credits", amount: 500 }, { resource: "aluminum", amount: 2 }],
-            maintenance: [{ resource: "energy", amount: 1 }],
-            ability: "bombing",
-          },
-        ],
+
         production: {
           label: "Produced at",
           unit: "units/cycle",
         },
+
         costs: {
           fabrication: "Fabrication",
           maintenance: "Maintenance",
         },
+
         resources: {
           credits: "Credits",
           food: "Food",
@@ -328,162 +593,80 @@ export const en: TranslationKeys = {
           aluminum: "Aluminum",
           component: "Component",
         },
+
         sections: {
-          characteristics: "Characteristics",
+          characteristics: "Stats",
           production: "Production",
           costs: "Costs",
-          specialAbility: "Special Ability",
+          specialAbility: "Special ability",
           none: "None",
         },
+
         mobile: {
           expand: "View details",
           collapse: "Collapse",
           swipeHint: "Swipe to see other units",
         },
+
+        list: [], // units names can stay FR or be localized later if you want
       },
+
       victory: {
         eyebrow: "STRATEGY & CONQUEST",
-        title: "Three Paths to Victory",
-        accentWord: "Victory",
-        subtitle: "Choose your strategy. Own the consequences.",
+        title: "Three paths to victory",
+        accentWord: "victory",
+        subtitle: "Choose your strategy. Accept the consequences.",
+
         pathLabel: "Path to victory",
-        expandPath: "View steps",
+        expandPath: "Show steps",
         collapsePath: "Hide steps",
-        paths: [
-          {
-            id: "military",
-            title: "Military Victory",
-            tag: "Force & Conquest",
-            category: "Force & Conquest",
-            description: "Crush your opponents with brute force. Destroy their command centers to eliminate them permanently.",
-            steps: [
-              "Produce a powerful army",
-              "Control strategic points",
-              "Launch coordinated offensives",
-              "Destroy enemy HQs",
-            ],
-          },
-          {
-            id: "influence",
-            title: "Influence Victory",
-            tag: "Diplomacy & Economy",
-            category: "Diplomacy & Economy",
-            description: "Dominate through negotiation and economic control. Rally neutral factions and strangle your rivals.",
-            steps: [
-              "Develop a trade network",
-              "Forge strategic alliances",
-              "Control rare resources",
-              "Reach the influence threshold",
-            ],
-          },
-          {
-            id: "domination",
-            title: "Domination Victory",
-            tag: "Survival & Elimination",
-            category: "Survival & Elimination",
-            description: "Be the last one standing. Survive assaults, eliminate all rivals and claim the entire planet.",
-            steps: [
-              "Fortify your key positions",
-              "Exhaust enemy resources",
-              "Eliminate rival factions",
-              "Control 100% of the territory",
-            ],
-          },
-        ],
+
         mobile: {
           swipeHint: "Swipe to see other paths",
         },
+
+        paths: [], // can translate later if needed
       },
+
       community: {
         eyebrow: "COMMUNITY & ACTIVITY",
         title: "Join the Community",
         accentWord: "Community",
         subtitle: "Recruitment, diplomacy, alliances — expand your network.",
+
         channelsTitle: "Channels",
         resourcesTitle: "Resources",
+
+        discord: {
+          title: "Official Discord HQ",
+          live: "LIVE",
+          description: "Join Battlecorp commanders and expand your network.",
+          cta: "Join Discord",
+          features: [],
+          channels: [],
+          resources: [],
+          moderation: "Moderation • anti-spam • structured feedback",
+        },
+
         kpi: {
           players: { value: "2847", label: "players" },
           games: { value: "25420", label: "games played" },
           territories: { value: "892", label: "territories conquered" },
           betaDays: { value: "127", label: "beta days" },
         },
-        discord: {
-          title: "Official Discord HQ",
-          live: "LIVE",
-          description: "Join Battlecorp commanders and expand your network.",
-          cta: "Join Discord",
-          features: [
-            "Recruitment & corporations (find your side)",
-            "Diplomacy & alliances (temporary…)",
-            "War room & strategies (eco / influence / combat)",
-            "Patch notes & announcements (beta)",
-          ],
-          channels: ["#recruitment", "#diplomacy", "#war-room", "#patch-notes"],
-          resources: ["Wiki", "Guides", "Support"],
-          moderation: "Moderation • anti-spam • structured feedback",
-        },
       },
+
       cta: {
-        eyebrow: "INSTANT ACCESS",
+        eyebrow: "IMMEDIATE ACCESS",
         title: "Ready to play?",
-        accentWord: "play",
-        subtitle: "Join the beta. Get ahead.",
+        subtitle: "Join the beta. Get ahead of the war.",
         ctaPrimary: "Join the Beta",
-        ctaSecondary: "Watch Demo",
+        ctaSecondary: "View Demo",
         proofs: ["Free", "No install", "Progress saved"],
       },
     },
   },
-  auth: {
-    login: {
-      title: "Login",
-      subtitle: "Sign in to your BattleCorp account",
-      email: "Email",
-      password: "Password",
-      submit: "Sign in",
-      noAccount: "Don't have an account?",
-      createAccount: "Create an account",
-      forgotPassword: "Forgot password?",
-    },
-    signup: {
-      title: "Sign Up",
-      subtitle: "Create your BattleCorp account",
-      username: "Username",
-      email: "Email",
-      password: "Password",
-      confirmPassword: "Confirm password",
-      submit: "Create my account",
-      hasAccount: "Already have an account?",
-      signIn: "Sign in",
-      acceptTerms: "I accept the terms of use",
-    },
-  },
-  authShell: {
-    title: "Account Access",
-    description: "The login and signup module will be available soon. In the meantime, join the community on Discord for the latest announcements.",
-    phase: "Authentication module — Phase 2",
-    backHome: "Back to home",
-    openDiscord: "Open Discord",
-  },
-  app: {
-    title: "Reserved Area",
-    description: "The BattleCorp application will be available soon.",
-    phase: "Phase 2 — In development",
-    backHome: "Back to home",
-    openDiscord: "Open Discord",
-  },
-  notFound: {
-    code: "404",
-    title: "Oops! This page doesn't exist.",
-    backHome: "Back to home",
-  },
-  validation: {
-    required: "This field is required",
-    invalidEmail: "Invalid email",
-    minLength8: "Minimum 8 characters",
-    passwordMismatch: "Passwords do not match",
-    minLength3: "Minimum 3 characters",
-  },
+
   common: {
     loading: "Loading...",
     error: "An error occurred",
@@ -497,9 +680,10 @@ export const en: TranslationKeys = {
     next: "Next",
     previous: "Previous",
     retry: "Retry",
-    empty: "No items",
+    empty: "Nothing here",
     close: "Close",
   },
+
   ui: {
     languageSwitch: {
       fr: "FR",
@@ -511,24 +695,18 @@ export const en: TranslationKeys = {
       system: "System",
     },
   },
-  legal: {
-    terms: {
-      title: "Terms of Use",
-      lastUpdate: "Last update:",
-      intro: "These terms govern the use of BattleCorp.",
-      body: "Terms of Use content to be completed.",
-    },
-    cookies: {
-      title: "Cookie Policy",
-      lastUpdate: "Last update:",
-      intro: "This page explains how BattleCorp uses cookies.",
-      body: "Cookie Policy content to be completed.",
-    },
-    privacy: {
-      title: "Privacy Policy",
-      lastUpdate: "Last update:",
-      intro: "This page describes how we collect and use your data.",
-      body: "Privacy Policy content to be completed.",
-    },
+
+  validation: {
+    required: "This field is required",
+    invalidEmail: "Invalid email",
+    minLength8: "Minimum 8 characters",
+    passwordMismatch: "Passwords do not match",
+    minLength3: "Minimum 3 characters",
   },
+
+  auth: {} as any,
+  authShell: {} as any,
+  app: {} as any,
+  notFound: {} as any,
+  legal: {} as any,
 };

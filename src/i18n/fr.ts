@@ -1,339 +1,4 @@
-export interface TranslationKeys {
-  meta: {
-    title: string;
-    description: string;
-  };
-  nav: {
-    home: string;
-    whitepaper: string;
-    wiki: string;
-    support: string;
-    login: string;
-    signup: string;
-    logout: string;
-    dashboard: string;
-  };
-  header: {
-    brand: string;
-    menuOpen: string;
-    links: string;
-    social: string;
-  };
-  footer: {
-    rights: string;
-    links: {
-      whitepaper: string;
-      wiki: string;
-      support: string;
-      discord: string;
-      facebook: string;
-    };
-    legal: {
-      terms: string;
-      cookies: string;
-      privacy: string;
-    };
-    sections: {
-      links: string;
-      social: string;
-      legal: string;
-    };
-  };
-  home: {
-    sections: {
-      hero: {
-        badge: string;
-        titlePart1: string;
-        titlePart2: string;
-        tagline: string;
-        quote: string;
-        quoteAttribution: string;
-        cta: string;
-        ctaSecondary: string;
-      };
-      howToPlay: {
-        eyebrow: string;
-        title: string;
-        accentWord: string;
-        subtitle: string;
-        imageAlt: string;
-        tacticalAdvice: {
-          label: string;
-          quotes: string[];
-        };
-        navigation: {
-          previous: string;
-          next: string;
-        };
-        steps: {
-          title: string;
-          description: string;
-          details: string[];
-        }[];
-        resources: {
-          title: string;
-          items: string[];
-        };
-        cta: string;
-      };
-      pillars: {
-        eyebrow: string;
-        title: string;
-        accentWord: string;
-        subtitle: string;
-        items: {
-          id: string;
-          title: string;
-          tagline: string;
-          category: string;
-          bullets: string[];
-          takeaway: string;
-          cta: string;
-        }[];
-        takeawayLabel: string;
-        stepLabel: string;
-        navHint: string;
-        statusLabel: string;
-        visualPreview: string;
-        mobile: {
-          expand: string;
-          collapse: string;
-          swipeHint: string;
-        };
-      };
-      units: {
-        eyebrow: string;
-        title: string;
-        accentWord: string;
-        subtitle: string;
-        roles: {
-          offensive: string;
-          defensive: string;
-        };
-        labels: {
-          melee: string;
-          ranged: string;
-          defense: string;
-          resistance: string;
-          na: string;
-        };
-        categories: {
-          infantry: string;
-          mechanical: string;
-          aerial: string;
-        };
-        buildingNames: {
-          academy: string;
-          factory: string;
-          spaceport: string;
-        };
-        abilities: {
-          stealthAttack: string;
-          preMeleeShot: string;
-          barrage: string;
-          bombing: string;
-        };
-        list: {
-          id: string;
-          name: string;
-          slogan: string;
-          building: "academy" | "factory" | "spaceport";
-          category: "infantry" | "mechanical" | "aerial";
-          role: "offensive" | "defensive";
-          stats: {
-            melee: number;
-            ranged: number | null;
-            defense: number;
-            resistance: number;
-          };
-          production: number;
-          fabrication: { resource: string; amount: number }[];
-          maintenance: { resource: string; amount: number }[];
-          ability: string | null;
-        }[];
-        production: {
-          label: string;
-          unit: string;
-        };
-        costs: {
-          fabrication: string;
-          maintenance: string;
-        };
-        resources: {
-          credits: string;
-          food: string;
-          energy: string;
-          steel: string;
-          titanium: string;
-          aluminum: string;
-          component: string;
-        };
-        sections: {
-          characteristics: string;
-          production: string;
-          costs: string;
-          specialAbility: string;
-          none: string;
-        };
-        mobile: {
-          expand: string;
-          collapse: string;
-          swipeHint: string;
-        };
-      };
-      victory: {
-        eyebrow: string;
-        title: string;
-        accentWord: string;
-        subtitle: string;
-        pathLabel: string;
-        expandPath: string;
-        collapsePath: string;
-        paths: {
-          id: string;
-          title: string;
-          tag: string;
-          category: string;
-          description: string;
-          steps: string[];
-        }[];
-        mobile: {
-          swipeHint: string;
-        };
-      };
-      community: {
-        eyebrow: string;
-        title: string;
-        accentWord: string;
-        subtitle: string;
-        channelsTitle: string;
-        resourcesTitle: string;
-        kpi: {
-          players: { value: string; label: string };
-          games: { value: string; label: string };
-          territories: { value: string; label: string };
-          betaDays: { value: string; label: string };
-        };
-        discord: {
-          title: string;
-          live: string;
-          description: string;
-          cta: string;
-          features: string[];
-          channels: string[];
-          resources: string[];
-          moderation: string;
-        };
-      };
-      cta: {
-        eyebrow: string;
-        title: string;
-        accentWord: string;
-        subtitle: string;
-        ctaPrimary: string;
-        ctaSecondary: string;
-        proofs: string[];
-      };
-    };
-  };
-  auth: {
-    login: {
-      title: string;
-      subtitle: string;
-      email: string;
-      password: string;
-      submit: string;
-      noAccount: string;
-      createAccount: string;
-      forgotPassword: string;
-    };
-    signup: {
-      title: string;
-      subtitle: string;
-      username: string;
-      email: string;
-      password: string;
-      confirmPassword: string;
-      submit: string;
-      hasAccount: string;
-      signIn: string;
-      acceptTerms: string;
-    };
-  };
-  authShell: {
-    title: string;
-    description: string;
-    phase: string;
-    backHome: string;
-    openDiscord: string;
-  };
-  app: {
-    title: string;
-    description: string;
-    phase: string;
-    backHome: string;
-    openDiscord: string;
-  };
-  notFound: {
-    code: string;
-    title: string;
-    backHome: string;
-  };
-  validation: {
-    required: string;
-    invalidEmail: string;
-    minLength8: string;
-    passwordMismatch: string;
-    minLength3: string;
-  };
-  common: {
-    loading: string;
-    error: string;
-    success: string;
-    cancel: string;
-    confirm: string;
-    save: string;
-    delete: string;
-    edit: string;
-    back: string;
-    next: string;
-    previous: string;
-    retry: string;
-    empty: string;
-    close: string;
-  };
-  ui: {
-    languageSwitch: {
-      fr: string;
-      en: string;
-    };
-    theme: {
-      light: string;
-      dark: string;
-      system: string;
-    };
-  };
-  legal: {
-    terms: {
-      title: string;
-      lastUpdate: string;
-      intro: string;
-      body: string;
-    };
-    cookies: {
-      title: string;
-      lastUpdate: string;
-      intro: string;
-      body: string;
-    };
-    privacy: {
-      title: string;
-      lastUpdate: string;
-      intro: string;
-      body: string;
-    };
-  };
-}
+import { TranslationKeys } from "./en";
 
 export const fr: TranslationKeys = {
   meta: {
@@ -379,28 +44,28 @@ export const fr: TranslationKeys = {
   home: {
     sections: {
       hero: {
-        badge: "BÊTA OUVERTE — WARGAME DISPONIBLE",
+        badge: "PLAYTEST — WARGAME DISPONIBLE",
         titlePart1: "BATTLE",
         titlePart2: "CORP",
-        tagline: "Dirigez une corporation et dominez vos rivaux.",
+        tagline: "La guerre est une industrie. À vous de la dominer.",
         quote: "« Une cité se construit. Une planète se conquiert. »",
         quoteAttribution: "— Manuel d'Opérations, Directive interne",
-        cta: "REJOINDRE LA BÊTA",
+        cta: "REJOINDRE LE PLAYTEST",
         ctaSecondary: "VOIR LA DÉMO",
       },
       howToPlay: {
-        eyebrow: "BOUCLE DE JEU",
+        eyebrow: "GAMEPLAY",
         title: "Comment jouer",
         accentWord: "jouer",
-        subtitle: "Maîtrisez les cycles, gérez vos ressources, projetez la force.",
+        subtitle: "Développez votre base, alimentez votre industrie et projetez vos forces pour conquérir la planète.",
         imageAlt: "Base cyberpunk",
         tacticalAdvice: {
           label: "CONSEIL TACTIQUE",
           quotes: [
-            "« Votre QG est votre talon d'Achille. Perdez-le, et la partie est terminée. »",
-            "« Un contribuable qui paye vaut mieux que dix travailleurs sans crédits. »",
+            "« Votre QG est votre centre névralgique. Perdez-le, et la partie est terminée. »",
+            "« un travailleur productif vaut plus que dix contribuables inactifs. »",
             "« L'armée la mieux ravitaillée gagne la guerre, pas la bataille. »",
-            "« Pilonnez avant d'attaquer. Bombardez avant de pilonner. »",
+            "« Pilonnez. Bombardez. Puis envahissez. »",
           ],
         },
         navigation: {
@@ -409,39 +74,39 @@ export const fr: TranslationKeys = {
         },
         steps: [
           {
-            title: "Implantez votre base",
-            description: "Protégez votre centre de commandement — sa perte signifie élimination immédiate.",
+            title: "Sécurisez votre base",
+            description: "Votre QG est votre point vital. Sa perte signifie l’élimination immédiate.",
             details: [
-              "Territoire de départ = élimination si perdu",
-              "Investir dans la défense autant que l'offensive",
-              "Bunkers et garnisons pour protéger votre base",
+              "Territoire de départ = défaite si capturé",
+              "Investissez dans la diplomacie, les défenses et garnisons",
+              "Anticipez les frappes ennemies avec surveillance et protection",
             ],
           },
           {
-            title: "Développez vos territoires",
-            description: "Chaque territoire apporte population, ressources et positions stratégiques essentielles.",
+            title: "Étendez votre contrôle territoriale",
+            description: "Chaque territoire conquis augmente votre population, vos ressources et votre capacité industrielle.",
             details: [
-              "4 types : Départ, Gouvernement, Neutre, Standard",
-              "Population = travailleurs vs contribuables",
-              "2 à 6 zones constructibles par territoire",
+              "Extraction minière : acier, uranium, titane, aluminium",
+              "4 000 à 8 000 habitants mobilisables pour produire",
+              "2 à 6 emplacements pour construire ses infrastructures",
             ],
           },
           {
             title: "Produisez & entretenez",
-            description: "Énergie, composants, troupes — optimisez votre chaîne de production pour la guerre.",
+            description: "Maintenez votre économie pour alimenter troupes, bâtiments et opérations militaires.",
             details: [
-              "6 ressources : crédits, énergie, vivres, acier, composants, titane",
-              "Bâtiments : Académie, Usine mécanique, Spatioport",
-              "Cycles de 12 phases pour la production",
+              "Ressources stratégiques à équilibrer en permanence",
+              "Bâtiments dédiés à la formation, la fabrication et à la defense.",
+              "Résolution logistique toutes les 12 phases : anticipez ou subissez",
             ],
           },
           {
             title: "Projetez la force",
-            description: "Pilotage, frappes aériennes, invasion terrestre — prenez l'avantage sur la carte.",
+            description: "Déployez la puissance militaire de votre Battlecorp pour écraser toute résistance planétaire.",
             details: [
-              "Attaque terrestre : 6 phases",
-              "Pilonnage (artillerie) : 3 phases",
-              "Bombardement (aviation) : 3 phases",
+              "Colonnes terrestres : avancée et sécurisation des zones (6 phases)",
+              "Pilonnages d’artilleries : suppression et harcèlement longue portée (3 phases)",
+              "Escadrilles aériennes : bombardements tactiques et frappes éclairs (3 phases)",
             ],
           },
         ],
@@ -452,59 +117,59 @@ export const fr: TranslationKeys = {
         cta: "Voir le Wiki",
       },
       pillars: {
-        eyebrow: "MÉCANIQUES DE JEU",
-        title: "4 piliers pour dominer la planète",
+        eyebrow: "STRATEGIE",
+        title: "4 leviers pour dominer la planète",
         accentWord: "dominer",
-        subtitle: "Quatre leviers pour prendre l'avantage et le garder.",
+        subtitle: "Maîtrisez ces principes pour prendre l’avantage… et ne jamais le perdre.",
         items: [
           {
-            id: "conquest",
-            title: "Conquête planétaire",
-            tagline: "Chaque territoire compte.",
-            category: "Stratégie / Macro",
+            id: "tempo",
+            title: "Contrôler le tempo",
+            tagline: "Anticipez plus vite que vos adversaires.",
+            category: "Décision / Timing",
             bullets: [
-              "Contrôlez des zones pour accéder aux ressources et étendre votre influence.",
-              "Les frontières ne sont jamais stables — adaptez-vous ou perdez du terrain.",
-              "Les territoires gouvernementaux offrent des bonus stratégiques majeurs — ciblez-les en priorité.",
+              "Chaque action est résolue par phases : planifiez plusieurs cycles à l’avance.",
+              "Le système LOCK empêche tout retour en arrière.",
+              "Un retard logistique se paie immédiatement sur le front.",
             ],
-            takeaway: "Celui qui contrôle la carte dicte le tempo de la partie.",
+            takeaway: "Celui qui décide plus vite impose la guerre aux autres.",
             cta: "Voir la fiche (Codex)",
           },
           {
             id: "economy",
-            title: "Économie de guerre",
+            title: "Supériorité économique",
             tagline: "Convertissez ressources → puissance.",
-            category: "Production / Logistique",
+            category: "Industrie / Logistique",
             bullets: [
-              "Gérez crédits, nourriture, énergie et composants pour alimenter votre machine de guerre.",
-              "Un déséquilibre économique peut vous condamner avant même le premier combat.",
-              "Chaque travailleur compte : répartissez votre population entre production et revenus fiscaux.",
+              "Plus de ressources = plus d’unités = plus d’options tactiques.",
+              "Un déficit économique bloque toute expansion.",
+              "Optimisez travailleurs, infrastructures et rendements.",
             ],
             takeaway: "L'armée la mieux ravitaillée gagne la guerre, pas la bataille.",
             cta: "Voir la fiche (Codex)",
           },
           {
-            id: "cycles",
-            title: "Cycles & LOCK",
-            tagline: "Décidez vite, jouez plus vite.",
-            category: "Tempo / Décision",
+            id: "pressure",
+            title: "Pression militaire",
+            tagline: "DNe laissez jamais l’ennemi respirer.",
+            category: "Offensive / Carte",
             bullets: [
-              "La partie avance par cycles — chaque phase impose des choix stratégiques sous pression temporelle.",
-              "Le système LOCK empêche les retours en arrière : assumez vos décisions.",
-              "12 phases par cycle — planifiez vos actions militaires et économiques plusieurs tours à l'avance.",
+              "Multipliez frappes et menaces diplomatiques pour forcer des erreurs.",
+              "Coupez les lignes de production adverses.",
+              "Une attaque constante vaut mieux qu’un assaut isolé.",
             ],
-            takeaway: "Hésiter, c'est déjà perdre. La vitesse de décision est un avantage.",
+            takeaway: "Hésiter, c'est déjà perdre. La pression permanente brise les défenses.",
             cta: "Voir la fiche (Codex)",
           },
           {
-            id: "hq",
-            title: "Centre de commandement",
-            tagline: "Protégez votre base. Ou perdez tout.",
-            category: "Défense / Survie",
+            id: "survival",
+            title: "Survie du QG",
+            tagline: "Perdre sa base, c’est disparaître.",
+            category: "Défense / Priorités",
             bullets: [
-              "Votre QG est votre point le plus vulnérable — sa destruction signifie l'élimination.",
-              "Investissez dans sa défense autant que dans vos offensives.",
-              "Bunkers, garnisons et unités défensives : diversifiez vos lignes de protection.",
+              "Votre centre de commandement est la cible principale.",
+              "Investissez autant en protection qu’en expansion.",
+              "Une base solide permet toutes les audaces offensives.",
             ],
             takeaway: "Conquérir sans protéger, c'est bâtir sur du sable.",
             cta: "Voir la fiche (Codex)",
@@ -512,13 +177,13 @@ export const fr: TranslationKeys = {
         ],
         takeawayLabel: "À retenir",
         stepLabel: "ÉTAPE",
-        navHint: "Sélectionnez un pilier pour en savoir plus",
-        statusLabel: "PILIER",
+        navHint: "Sélectionnez un levier pour en savoir plus",
+        statusLabel: "LEVIER",
         visualPreview: "APERÇU VISUEL",
         mobile: {
           expand: "Voir le point clé",
           collapse: "Réduire",
-          swipeHint: "Swipez pour voir les autres piliers",
+          swipeHint: "Swipez pour voir les autres leviers",
         },
       },
       units: {
@@ -686,16 +351,16 @@ export const fr: TranslationKeys = {
         collapsePath: "Masquer les étapes",
         paths: [
           {
-            id: "military",
-            title: "Victoire Militaire",
+            id: "militaire",
+            title: "Victoire militaire",
             tag: "Force & Conquête",
             category: "Force & Conquête",
-            description: "Écrasez vos adversaires par la puissance brute. Détruisez leurs centres de commandement pour les éliminer définitivement.",
+            description: "Atteignez et garder les territoires stratégiques pour prendre le contrôle de la planète.",
             steps: [
               "Produire une armée puissante",
               "Contrôler les points stratégiques",
               "Lancer des offensives coordonnées",
-              "Détruire les QG ennemis",
+              "Soumettre les ennemis",
             ],
           },
           {
@@ -703,9 +368,9 @@ export const fr: TranslationKeys = {
             title: "Victoire par Influence",
             tag: "Diplomatie & Économie",
             category: "Diplomatie & Économie",
-            description: "Dominez par la négociation et le contrôle économique. Ralliez les factions neutres et étouffez vos rivaux.",
+            description: "Dominez par la négociation et le contrôle économique. Convertissez la population locale et renversez vos rivaux.",
             steps: [
-              "Développer un réseau commercial",
+              "Développer un réseau commercial d'usine de luxe",
               "Forger des alliances stratégiques",
               "Contrôler les ressources rares",
               "Atteindre le seuil d'influence",
@@ -721,7 +386,7 @@ export const fr: TranslationKeys = {
               "Fortifier vos positions clés",
               "Épuiser les ressources adverses",
               "Éliminer les factions rivales",
-              "Contrôler 100% du territoire",
+              "Contrôler 100% des territoires",
             ],
           },
         ],
@@ -761,7 +426,6 @@ export const fr: TranslationKeys = {
       cta: {
         eyebrow: "ACCÈS IMMÉDIAT",
         title: "Prêt à jouer ?",
-        accentWord: "jouer",
         subtitle: "Entrez en bêta. Prenez une longueur d'avance.",
         ctaPrimary: "Rejoindre la Bêta",
         ctaSecondary: "Voir la Démo",
