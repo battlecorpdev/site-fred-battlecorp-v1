@@ -463,11 +463,11 @@ export const fr: TranslationKeys = {
             tagline: "Anticipez plus vite que vos adversaires.",
             category: "Décision / Timing",
             bullets: [
-              "Chaque action est résolue par phases : planifiez plusieurs cycles à l’avance.",
-              "Le système LOCK empêche tout retour en arrière.",
-              "Un retard logistique se paie immédiatement sur le front.",
+              "Le temps est découpé en phases tactiques.",
+              "Décidez. Engagez. Aucun retour.",
+              "Chaque erreur coûte du sang, des crédits et du terrain.",
             ],
-            takeaway: "Celui qui décide plus vite impose la guerre aux autres.",
+            takeaway: "Imposer le tempo, c’est imposer la guerre.",
             cta: "Voir la fiche (Codex)",
           },
           {
