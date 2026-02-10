@@ -33,7 +33,7 @@ function LanguageGuard({ children }: { children: ReactNode }) {
 function App() {
   return (
     <ErrorBoundary>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           {/* Root redirect */}
           <Route path="/" element={<Navigate to={`/${defaultLanguage}`} replace />} />
