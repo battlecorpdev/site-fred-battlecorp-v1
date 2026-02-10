@@ -26,7 +26,7 @@ export default function Home() {
   }, [t.meta.title, t.meta.description, location.pathname, language]);
 
   return (
-    <>
+    <div key={language}>
       {/* Hero - no Section wrapper, handles its own spacing */}
       <HeroSection />
 
@@ -71,6 +71,6 @@ export default function Home() {
       <section id="cta-final" className="scroll-mt-24">
         <FinalCTASection />
       </section>
-    </>
+    </div>
   );
 }

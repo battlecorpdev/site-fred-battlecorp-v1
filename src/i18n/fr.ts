@@ -107,8 +107,8 @@ export interface TranslationKeys {
         accentWord: string;
         subtitle: string;
         roles: {
-          offensive: string;
-          defensive: string;
+          terrestrial: string;
+          aerial: string;
         };
         labels: {
           melee: string;
@@ -139,7 +139,7 @@ export interface TranslationKeys {
           slogan: string;
           building: "academy" | "factory" | "spaceport";
           category: "infantry" | "mechanical" | "aerial";
-          role: "offensive" | "defensive";
+          role: "terrestrial" | "aerial";
           stats: {
             melee: number;
             ranged: number | null;
@@ -228,6 +228,7 @@ export interface TranslationKeys {
       cta: {
         eyebrow: string;
         title: string;
+        accentWord: string;
         subtitle: string;
         ctaPrimary: string;
         ctaSecondary: string;
@@ -457,7 +458,7 @@ export const fr: TranslationKeys = {
         subtitle: "Maîtrisez ces principes pour prendre l’avantage… et ne jamais le perdre.",
         items: [
           {
-            id: "tempo",
+            id: "conquest",
             title: "Contrôler le tempo",
             tagline: "Anticipez plus vite que vos adversaires.",
             category: "Décision / Timing",
@@ -483,9 +484,9 @@ export const fr: TranslationKeys = {
             cta: "Voir la fiche (Codex)",
           },
           {
-            id: "pressure",
+            id: "cycles",
             title: "Pression militaire",
-            tagline: "DNe laissez jamais l’ennemi respirer.",
+            tagline: "Ne laissez jamais l’ennemi respirer.",
             category: "Offensive / Carte",
             bullets: [
               "Multipliez frappes et menaces diplomatiques pour forcer des erreurs.",
@@ -496,7 +497,7 @@ export const fr: TranslationKeys = {
             cta: "Voir la fiche (Codex)",
           },
           {
-            id: "survival",
+            id: "hq",
             title: "Survie du QG",
             tagline: "Perdre sa base, c’est disparaître.",
             category: "Défense / Priorités",
@@ -526,8 +527,8 @@ export const fr: TranslationKeys = {
         accentWord: "combat",
         subtitle: "Chaque unité a un rôle. Chaque choix a un coût.",
         roles: {
-          offensive: "Offensif",
-          defensive: "Défensif",
+          terrestrial: "Terrestre",
+          aerial: "Aérien",
         },
         labels: {
           melee: "Mêlée",
@@ -544,7 +545,7 @@ export const fr: TranslationKeys = {
         buildingNames: {
           academy: "Académie Militaire",
           factory: "Usine Mécanique",
-          spaceport: "Spatioport",
+          spaceport: "Astroport",
         },
         abilities: {
           stealthAttack: "Attaque furtive",
@@ -559,7 +560,7 @@ export const fr: TranslationKeys = {
             slogan: "Le premier à entrer. Le dernier à partir.",
             building: "academy",
             category: "infantry",
-            role: "defensive",
+            role: "terrestrial",
             stats: { melee: 1, ranged: null, defense: 4, resistance: 1 },
             production: 20,
             fabrication: [{ resource: "credits", amount: 100 }],
@@ -572,7 +573,7 @@ export const fr: TranslationKeys = {
             slogan: "Là où la défense rassure, le Commando termine.",
             building: "academy",
             category: "infantry",
-            role: "offensive",
+            role: "terrestrial",
             stats: { melee: 10, ranged: null, defense: 2, resistance: 2 },
             production: 7,
             fabrication: [{ resource: "credits", amount: 250 }, { resource: "component", amount: 1 }],
@@ -585,7 +586,7 @@ export const fr: TranslationKeys = {
             slogan: "Quand la chair hésite, l'acier exécute.",
             building: "factory",
             category: "mechanical",
-            role: "offensive",
+            role: "terrestrial",
             stats: { melee: 3, ranged: null, defense: 3, resistance: 3 },
             production: 40,
             fabrication: [{ resource: "credits", amount: 10 }, { resource: "component", amount: 1 }],
@@ -598,7 +599,7 @@ export const fr: TranslationKeys = {
             slogan: "On ne discute pas avec un blindage.",
             building: "factory",
             category: "mechanical",
-            role: "offensive",
+            role: "terrestrial",
             stats: { melee: 10, ranged: 4, defense: 5, resistance: 5 },
             production: 7,
             fabrication: [{ resource: "credits", amount: 500 }, { resource: "steel", amount: 10 }],
@@ -611,7 +612,7 @@ export const fr: TranslationKeys = {
             slogan: "Le front avance quand l'arrière décide.",
             building: "factory",
             category: "mechanical",
-            role: "offensive",
+            role: "terrestrial",
             stats: { melee: 1, ranged: 20, defense: 1, resistance: 1 },
             production: 5,
             fabrication: [{ resource: "credits", amount: 1000 }, { resource: "titanium", amount: 5 }],
@@ -624,7 +625,7 @@ export const fr: TranslationKeys = {
             slogan: "Au sol, on lutte. Dans les airs, on tranche.",
             building: "spaceport",
             category: "aerial",
-            role: "offensive",
+            role: "aerial",
             stats: { melee: 1, ranged: 20, defense: 1, resistance: 2 },
             production: 5,
             fabrication: [{ resource: "credits", amount: 500 }, { resource: "aluminum", amount: 5 }, { resource: "steel", amount: 5 }],
@@ -637,7 +638,7 @@ export const fr: TranslationKeys = {
             slogan: "Le ciel est une frontière. Nous la fermons.",
             building: "spaceport",
             category: "aerial",
-            role: "offensive",
+            role: "aerial",
             stats: { melee: 5, ranged: 2, defense: 5, resistance: 5 },
             production: 10,
             fabrication: [{ resource: "credits", amount: 500 }, { resource: "aluminum", amount: 2 }],
