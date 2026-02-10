@@ -274,6 +274,65 @@ export interface TranslationKeys {
     backHome: string;
     openDiscord: string;
   };
+  appConnected: {
+    meta: {
+      title: string;
+      description: string;
+    };
+    hero: {
+      badge: string;
+      title: string;
+      titleAccent: string;
+      cta: string;
+      quote: string;
+      lore: string[];
+    };
+    howTo: {
+      eyebrow: string;
+      title: string;
+      accent: string;
+      subtitle: string;
+      previous: string;
+      next: string;
+      placeholderLabel: string;
+      items: {
+        id: string;
+        title: string;
+        duration: string;
+        description: string;
+        bullets: string[];
+      }[];
+    };
+    rankings: {
+      eyebrow: string;
+      title: string;
+      accent: string;
+      subtitle: string;
+      statusLabel: string;
+      previewTitle: string;
+      previewRows: string[];
+      rankPrefix: string;
+      valuePlaceholder: string;
+      items: {
+        id: string;
+        title: string;
+        tagline: string;
+        category: string;
+        metrics: string[];
+      }[];
+    };
+    disclaimer: {
+      eyebrow: string;
+      title: string;
+      accent: string;
+      subtitle: string;
+      badgeLabel: string;
+      paragraphs: string[];
+    };
+    common: {
+      backHome: string;
+    };
+  };
   notFound: {
     code: string;
     title: string;
@@ -806,6 +865,126 @@ export const fr: TranslationKeys = {
     phase: "Phase 2 — En développement",
     backHome: "Retour à l'accueil",
     openDiscord: "Ouvrir Discord",
+  },
+  appConnected: {
+    meta: {
+      title: "BattleCorp - Espace Commandant",
+      description: "Page connectee BattleCorp: bienvenue commandant, gameplay, classements et avertissement beta.",
+    },
+    hero: {
+      badge: "ESPACE JOUEUR CONNECTE",
+      title: "Bienvenue, Commandant",
+      titleAccent: "Commandant",
+      cta: "JOUER",
+      quote: "Votre reputation resonne a travers les etoiles...",
+      lore: [
+        "L'annee est 3764. Depuis pres de quatre siecles, la galaxie humaine est divisee entre des mega-corporations militaires privees - les Battlecorps - engagees dans une competition feroce pour les droits d'exploitation des planetes riches en ressources, designees Territoires Strategiques et Industriels (TSI).",
+        "Les Etats-nations ne sont plus que des facades legales. La guerre est devenue une industrie regulee, guidee par des contrats et controlee strictement. Officiellement, ce ne sont pas des guerres: ce sont des operations de performance competitive.",
+        "Prenez le controle de votre propre BattleCorp et menez des operations de conquete strategique a travers des planetes devastees, hostiles et fragmentees.",
+        "La guerre n'est plus l'affaire des nations. Elle est devenue celle des corporations.",
+      ],
+    },
+    howTo: {
+      eyebrow: "GAMEPLAY",
+      title: "Comment jouer",
+      accent: "jouer",
+      subtitle: "Meme cadre et meme energie que la section gameplay. Les videos finales seront injectees ici.",
+      previous: "Precedent",
+      next: "Suivant",
+      placeholderLabel: "Emplacement video",
+      items: [
+        {
+          id: "step-1",
+          title: "Prise en main rapide",
+          duration: "01:20",
+          description: "Presentation de l'interface commandant et des premiers objectifs.",
+          bullets: [
+            "Vue generale du theatre",
+            "Raccourcis de commandement",
+            "Priorites du premier cycle",
+          ],
+        },
+        {
+          id: "step-2",
+          title: "Planification operationnelle",
+          duration: "02:10",
+          description: "Comment preparer une sequence complete sans casser votre economie.",
+          bullets: [
+            "Ordre des actions critiques",
+            "Gestion des ressources sous pression",
+            "Preparation des offensives",
+          ],
+        },
+        {
+          id: "step-3",
+          title: "Projection de force",
+          duration: "01:45",
+          description: "Coordinations terrestres et aeriennes pour verrouiller la carte.",
+          bullets: [
+            "Synchroniser les unites",
+            "Exploiter les fenetres tactiques",
+            "Securiser les territoires clefs",
+          ],
+        },
+      ],
+    },
+    rankings: {
+      eyebrow: "CLASSEMENTS",
+      title: "Les classements",
+      accent: "classements",
+      subtitle: "Reprise du modele STRATEGIE avec navigation par onglets, statut actif et panneau detail.",
+      statusLabel: "CLASSEMENT ACTIF",
+      previewTitle: "Apercu leaderboard",
+      previewRows: ["Commandant_Alpha", "Commandant_Bravo", "Commandant_Charlie"],
+      rankPrefix: "#",
+      valuePlaceholder: "--",
+      items: [
+        {
+          id: "global",
+          title: "Classement global",
+          tagline: "Les commandants les plus performants",
+          category: "Performance totale",
+          metrics: ["Victoires confirmees", "Ratio controle/perte", "Serie de domination"],
+        },
+        {
+          id: "territorial",
+          title: "Conquete territoriale",
+          tagline: "Ceux qui tiennent la carte",
+          category: "Controle TSI",
+          metrics: ["Territoires detenus", "Temps de controle cumule", "Expansion par cycle"],
+        },
+        {
+          id: "economy",
+          title: "Economie de guerre",
+          tagline: "Les empires industriels",
+          category: "Production",
+          metrics: ["Rendement moyen", "Stabilite logistique", "Capacite de remplacement"],
+        },
+        {
+          id: "alliance",
+          title: "Influence diplomatique",
+          tagline: "Le pouvoir par reseau",
+          category: "Influence",
+          metrics: ["Accords valides", "Coalitions dirigees", "Poids diplomatique"],
+        },
+      ],
+    },
+    disclaimer: {
+      eyebrow: "AVERTISSEMENT BETA",
+      title: "Etat de la version",
+      accent: "version",
+      subtitle: "Battlecorp est en acces anticipe. Cette section reste visible pour informer chaque joueur connecte.",
+      badgeLabel: "Avertissement Beta",
+      paragraphs: [
+        "Battlecorp est actuellement en beta. Il s'agit d'une version en developpement actif: vous pouvez rencontrer des bugs, des degradations de performance ou des fonctionnalites incompletes.",
+        "L'acces beta peut etre limite a un nombre restreint de joueurs afin de proteger la stabilite des serveurs et de recueillir des retours qualifies.",
+        "Nous ajustons activement l'equilibrage et la feuille de route en fonction des retours de la communaute. Votre participation aide a definir la version finale.",
+        "Note: Battlecorp deviendra un jeu payant apres la phase beta. Merci de faire partie de l'aventure.",
+      ],
+    },
+    common: {
+      backHome: "Retour a l'accueil",
+    },
   },
   notFound: {
     code: "404",

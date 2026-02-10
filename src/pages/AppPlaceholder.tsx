@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useRef, useState } from "react";
+﻿import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   Play,
@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLanguage } from "@/i18n";
+import { useLanguage, type Language, type TranslationKeys } from "@/i18n";
 import { setDocumentMeta } from "@/lib/seo";
 import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
@@ -25,339 +25,7 @@ import heroBg from "@/assets/herodesktop_bg.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
-type LocalizedContent = {
-  meta: {
-    title: string;
-    description: string;
-  };
-  hero: {
-    badge: string;
-    title: string;
-    titleAccent: string;
-    cta: string;
-    quote: string;
-    lore: string[];
-  };
-  howTo: {
-    eyebrow: string;
-    title: string;
-    accent: string;
-    subtitle: string;
-    previous: string;
-    next: string;
-    placeholderLabel: string;
-    items: Array<{
-      id: string;
-      title: string;
-      duration: string;
-      description: string;
-      bullets: string[];
-    }>;
-  };
-  rankings: {
-    eyebrow: string;
-    title: string;
-    accent: string;
-    subtitle: string;
-    statusLabel: string;
-    previewTitle: string;
-    items: Array<{
-      id: string;
-      title: string;
-      tagline: string;
-      category: string;
-      metrics: string[];
-    }>;
-  };
-  disclaimer: {
-    eyebrow: string;
-    title: string;
-    accent: string;
-    subtitle: string;
-    paragraphs: string[];
-  };
-  common: {
-    play: string;
-    backHome: string;
-  };
-};
-
-const CONTENT: Record<"fr" | "en", LocalizedContent> = {
-  fr: {
-    meta: {
-      title: "BattleCorp - Espace Commandant",
-      description:
-        "Page connectee BattleCorp: bienvenue commandant, gameplay, classements et avertissement beta.",
-    },
-    hero: {
-      badge: "ESPACE JOUEUR CONNECTE",
-      title: "Bienvenue, Commandant",
-      titleAccent: "Commandant",
-      cta: "JOUER",
-      quote: "Votre reputation resonne a travers les etoiles...",
-      lore: [
-        "L'annee est 3764. Depuis pres de quatre siecles, la galaxie humaine est divisee entre des mega-corporations militaires privees - les Battlecorps - engagees dans une competition feroce pour les droits d'exploitation des planetes riches en ressources, designees Territoires Strategiques et Industriels (TSI).",
-        "Les Etats-nations ne sont plus que des facades legales. La guerre est devenue une industrie regulee, guidee par des contrats et controlee strictement. Officiellement, ce ne sont pas des guerres: ce sont des operations de performance competitive.",
-        "Prenez le controle de votre propre BattleCorp et menez des operations de conquete strategique a travers des planetes devastees, hostiles et fragmentees.",
-        "La guerre n'est plus l'affaire des nations. Elle est devenue celle des corporations.",
-      ],
-    },
-    howTo: {
-      eyebrow: "GAMEPLAY",
-      title: "Comment jouer",
-      accent: "jouer",
-      subtitle:
-        "Meme cadre et meme energie que la section gameplay. Les videos finales seront injectees ici.",
-      previous: "Precedent",
-      next: "Suivant",
-      placeholderLabel: "Emplacement video",
-      items: [
-        {
-          id: "step-1",
-          title: "Prise en main rapide",
-          duration: "01:20",
-          description: "Presentation de l'interface commandant et des premiers objectifs.",
-          bullets: [
-            "Vue generale du theatre",
-            "Raccourcis de commandement",
-            "Priorites du premier cycle",
-          ],
-        },
-        {
-          id: "step-2",
-          title: "Planification operationnelle",
-          duration: "02:10",
-          description: "Comment preparer une sequence complete sans casser votre economie.",
-          bullets: [
-            "Ordre des actions critiques",
-            "Gestion des ressources sous pression",
-            "Preparation des offensives",
-          ],
-        },
-        {
-          id: "step-3",
-          title: "Projection de force",
-          duration: "01:45",
-          description: "Coordinations terrestres et aeriennes pour verrouiller la carte.",
-          bullets: [
-            "Synchroniser les unites",
-            "Exploiter les fenetres tactiques",
-            "Securiser les territoires clefs",
-          ],
-        },
-      ],
-    },
-    rankings: {
-      eyebrow: "CLASSEMENTS",
-      title: "Les classements",
-      accent: "classements",
-      subtitle:
-        "Reprise du modele STRATEGIE avec navigation par onglets, statut actif et panneau detail.",
-      statusLabel: "CLASSEMENT ACTIF",
-      previewTitle: "Apercu leaderboard",
-      items: [
-        {
-          id: "global",
-          title: "Classement global",
-          tagline: "Les commandants les plus performants",
-          category: "Performance totale",
-          metrics: [
-            "Victoires confirmees",
-            "Ratio controle/perte",
-            "Serie de domination",
-          ],
-        },
-        {
-          id: "territorial",
-          title: "Conquete territoriale",
-          tagline: "Ceux qui tiennent la carte",
-          category: "Controle TSI",
-          metrics: [
-            "Territoires detenus",
-            "Temps de controle cumule",
-            "Expansion par cycle",
-          ],
-        },
-        {
-          id: "economy",
-          title: "Economie de guerre",
-          tagline: "Les empires industriels",
-          category: "Production",
-          metrics: [
-            "Rendement moyen",
-            "Stabilite logistique",
-            "Capacite de remplacement",
-          ],
-        },
-        {
-          id: "alliance",
-          title: "Influence diplomatique",
-          tagline: "Le pouvoir par reseau",
-          category: "Influence",
-          metrics: [
-            "Accords valides",
-            "Coalitions dirigees",
-            "Poids diplomatique",
-          ],
-        },
-      ],
-    },
-    disclaimer: {
-      eyebrow: "AVERTISSEMENT BETA",
-      title: "Etat de la version",
-      accent: "version",
-      subtitle:
-        "Battlecorp est en acces anticipe. Cette section reste visible pour informer chaque joueur connecte.",
-      paragraphs: [
-        "Battlecorp est actuellement en beta. Il s'agit d'une version en developpement actif: vous pouvez rencontrer des bugs, des degradations de performance ou des fonctionnalites incompletes.",
-        "L'acces beta peut etre limite a un nombre restreint de joueurs afin de proteger la stabilite des serveurs et de recueillir des retours qualifies.",
-        "Nous ajustons activement l'equilibrage et la feuille de route en fonction des retours de la communaute. Votre participation aide a definir la version finale.",
-        "Note: Battlecorp deviendra un jeu payant apres la phase beta. Merci de faire partie de l'aventure.",
-      ],
-    },
-    common: {
-      play: "Jouer",
-      backHome: "Retour a l'accueil",
-    },
-  },
-  en: {
-    meta: {
-      title: "BattleCorp - Commander Space",
-      description:
-        "BattleCorp connected-player page: welcome commander, gameplay videos, rankings, and beta warning.",
-    },
-    hero: {
-      badge: "CONNECTED PLAYER AREA",
-      title: "Welcome, Commander",
-      titleAccent: "Commander",
-      cta: "PLAY",
-      quote: "Your reputation echoes across the stars...",
-      lore: [
-        "Year 3764. For almost four centuries, the human galaxy has been split between private military mega-corporations - the Battlecorps - competing for exploitation rights over resource-rich planets known as Strategic and Industrial Territories (SIT).",
-        "Nation-states are now legal facades. War became a regulated industry driven by contracts and strict arbitration. Officially these are not wars: they are competitive performance operations.",
-        "Take control of your own BattleCorp and lead strategic conquest operations across devastated, hostile, and fragmented worlds.",
-        "War is no longer a matter of nations. It has become a matter of corporations.",
-      ],
-    },
-    howTo: {
-      eyebrow: "GAMEPLAY",
-      title: "How to play",
-      accent: "play",
-      subtitle:
-        "Same frame and same energy as the gameplay section. Final videos will be plugged in here.",
-      previous: "Previous",
-      next: "Next",
-      placeholderLabel: "Video placeholder",
-      items: [
-        {
-          id: "step-1",
-          title: "Quick onboarding",
-          duration: "01:20",
-          description: "A short commander UI walkthrough and your first priorities.",
-          bullets: [
-            "Theater overview",
-            "Command shortcuts",
-            "First-cycle priorities",
-          ],
-        },
-        {
-          id: "step-2",
-          title: "Operational planning",
-          duration: "02:10",
-          description: "Build a full action sequence without collapsing your economy.",
-          bullets: [
-            "Critical action order",
-            "Resource pressure handling",
-            "Offensive preparation",
-          ],
-        },
-        {
-          id: "step-3",
-          title: "Force projection",
-          duration: "01:45",
-          description: "Coordinate ground and air assets to lock the map.",
-          bullets: [
-            "Synchronize unit groups",
-            "Exploit tactical windows",
-            "Secure key territories",
-          ],
-        },
-      ],
-    },
-    rankings: {
-      eyebrow: "RANKINGS",
-      title: "Leaderboards",
-      accent: "Leader",
-      subtitle:
-        "Strategy-style module with tab navigation, active status, and detailed panel.",
-      statusLabel: "ACTIVE BOARD",
-      previewTitle: "Leaderboard preview",
-      items: [
-        {
-          id: "global",
-          title: "Global ranking",
-          tagline: "Top-performing commanders",
-          category: "Total performance",
-          metrics: [
-            "Confirmed victories",
-            "Control/loss ratio",
-            "Domination streak",
-          ],
-        },
-        {
-          id: "territorial",
-          title: "Territorial conquest",
-          tagline: "Commanders who hold the map",
-          category: "SIT control",
-          metrics: [
-            "Territories controlled",
-            "Total control uptime",
-            "Expansion per cycle",
-          ],
-        },
-        {
-          id: "economy",
-          title: "War economy",
-          tagline: "Industrial empires",
-          category: "Production",
-          metrics: [
-            "Average yield",
-            "Logistics stability",
-            "Replacement capacity",
-          ],
-        },
-        {
-          id: "alliance",
-          title: "Diplomatic influence",
-          tagline: "Power through network",
-          category: "Influence",
-          metrics: [
-            "Validated agreements",
-            "Coalitions led",
-            "Diplomatic weight",
-          ],
-        },
-      ],
-    },
-    disclaimer: {
-      eyebrow: "BETA WARNING",
-      title: "Current state",
-      accent: "state",
-      subtitle:
-        "Battlecorp is in early access. This section stays visible to all connected players.",
-      paragraphs: [
-        "Battlecorp is currently in beta and still under active development. You may encounter bugs, performance issues, or unfinished features.",
-        "Beta access may be limited to a restricted number of players to keep servers stable and gather focused feedback.",
-        "We are actively improving balancing and roadmap priorities from player feedback. By joining now, you help shape the final game.",
-        "Note: Battlecorp will become a paid game after beta. Thanks for being part of the journey.",
-      ],
-    },
-    common: {
-      play: "Play",
-      backHome: "Back home",
-    },
-  },
-};
+type ConnectedContent = TranslationKeys["appConnected"];
 
 const rankingIcons = [Trophy, Shield, Globe, BarChart3] as const;
 
@@ -365,8 +33,8 @@ function ConnectedHero({
   content,
   language,
 }: {
-  content: LocalizedContent["hero"];
-  language: "fr" | "en";
+  content: ConnectedContent["hero"];
+  language: Language;
 }) {
   const sectionRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -454,7 +122,7 @@ function ConnectedHero({
   );
 }
 
-function ConnectedHowTo({ content }: { content: LocalizedContent["howTo"] }) {
+function ConnectedHowTo({ content }: { content: ConnectedContent["howTo"] }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
@@ -615,7 +283,7 @@ function ConnectedHowTo({ content }: { content: LocalizedContent["howTo"] }) {
 function ConnectedRankings({
   content,
 }: {
-  content: LocalizedContent["rankings"];
+  content: ConnectedContent["rankings"];
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -759,21 +427,20 @@ function ConnectedRankings({
                   {content.previewTitle}
                 </h4>
                 <div className="space-y-3">
-                  <div className="flex items-center justify-between p-3 rounded-lg border border-primary/30 bg-primary/10">
-                    <span className="font-semibold">#1</span>
-                    <span className="text-muted-foreground">Commander_Alpha</span>
-                    <span className="text-primary font-mono">--</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 rounded-lg border border-border bg-card">
-                    <span className="font-semibold">#2</span>
-                    <span className="text-muted-foreground">Commander_Bravo</span>
-                    <span className="text-primary font-mono">--</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 rounded-lg border border-border bg-card">
-                    <span className="font-semibold">#3</span>
-                    <span className="text-muted-foreground">Commander_Charlie</span>
-                    <span className="text-primary font-mono">--</span>
-                  </div>
+                  {content.previewRows.map((player, index) => (
+                    <div
+                      key={player}
+                      className={`flex items-center justify-between p-3 rounded-lg border ${
+                        index === 0
+                          ? "border-primary/30 bg-primary/10"
+                          : "border-border bg-card"
+                      }`}
+                    >
+                      <span className="font-semibold">{content.rankPrefix}{index + 1}</span>
+                      <span className="text-muted-foreground">{player}</span>
+                      <span className="text-primary font-mono">{content.valuePlaceholder}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -789,7 +456,7 @@ function ConnectedDisclaimer({
   backHomeLabel,
   homePath,
 }: {
-  content: LocalizedContent["disclaimer"];
+  content: ConnectedContent["disclaimer"];
   backHomeLabel: string;
   homePath: string;
 }) {
@@ -840,7 +507,7 @@ function ConnectedDisclaimer({
         <div className="max-w-4xl mx-auto border border-accent/35 bg-card/75 rounded-xl p-5 md:p-8 shadow-[0_0_30px_hsl(var(--accent)/0.1)]">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent/40 bg-accent/10 text-accent text-xs font-semibold tracking-[0.12em] uppercase mb-5">
             <TriangleAlert className="w-4 h-4" />
-            Beta Notice
+            {content.badgeLabel}
           </div>
 
           <div className="space-y-4 mb-8">
@@ -861,11 +528,9 @@ function ConnectedDisclaimer({
 }
 
 export default function AppPlaceholder() {
-  const { language, getLocalizedPath } = useLanguage();
+  const { t, language, getLocalizedPath } = useLanguage();
   const location = useLocation();
-
-  const locale = (language === "en" ? "en" : "fr") as "fr" | "en";
-  const content = useMemo(() => CONTENT[locale], [locale]);
+  const content = t.appConnected;
 
   useEffect(() => {
     setDocumentMeta({
@@ -878,7 +543,7 @@ export default function AppPlaceholder() {
 
   return (
     <div key={language}>
-      <ConnectedHero content={content.hero} language={locale} />
+      <ConnectedHero content={content.hero} language={language} />
 
       <SectionDivider animated className="py-8 md:py-12" />
 
@@ -904,4 +569,3 @@ export default function AppPlaceholder() {
     </div>
   );
 }
-
