@@ -457,7 +457,7 @@ export const fr: TranslationKeys = {
           label: "CONSEIL TACTIQUE",
           quotes: [
             "« Votre QG est votre centre névralgique. Perdez-le, et la partie est terminée. »",
-            "« un travailleur productif vaut plus que dix contribuables inactifs. »",
+            "« Un travailleur productif vaut plus que dix contribuables inactifs. »",
             "« L'armée la mieux ravitaillée gagne la guerre, pas la bataille. »",
             "« Pilonnez. Bombardez. Puis envahissez. »",
           ],
