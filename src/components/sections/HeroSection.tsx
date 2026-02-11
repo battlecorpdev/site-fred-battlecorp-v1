@@ -368,12 +368,12 @@ export function HeroSection() {
               </span>
               <span 
                 ref={titlePart2Ref}
-                className="inline-block text-gradient-primary will-change-transform relative"
+                className="inline-block text-gradient-accent will-change-transform relative"
               >
                 {hero.titlePart2}
                 {/* Glow effect behind gradient text */}
                 <span 
-                  className="absolute inset-0 blur-xl bg-primary/20 -z-10"
+                  className="absolute inset-0 blur-xl bg-accent/20 -z-10"
                   aria-hidden="true"
                 />
               </span>

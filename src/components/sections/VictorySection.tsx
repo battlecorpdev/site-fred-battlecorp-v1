@@ -161,6 +161,7 @@ export function VictorySection() {
             title={section.title}
             accent={section.accentWord}
             subtitle={section.subtitle}
+            tone="cta"
           />
         </div>
 

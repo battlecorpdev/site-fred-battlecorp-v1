@@ -278,6 +278,7 @@ export function HowToPlaySection() {
             title={section.title}
             accent={section.accentWord}
             subtitle={section.subtitle}
+            tone="cta"
           />
         </div>
 
@@ -525,6 +526,7 @@ function MobileHowToPlay({ section }: { section: ReturnType<typeof useLanguage>[
             title={section.title}
             accent={section.accentWord}
             subtitle={section.subtitle}
+            tone="cta"
           />
         </div>
 

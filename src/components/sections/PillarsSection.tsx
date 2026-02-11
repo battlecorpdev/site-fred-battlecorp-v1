@@ -293,6 +293,7 @@ export function PillarsSection() {
             title={section.title}
             accent={section.accentWord}
             subtitle={section.subtitle}
+            tone="cta"
           />
         </div>
 

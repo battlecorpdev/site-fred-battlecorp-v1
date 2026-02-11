@@ -95,7 +95,20 @@ function ConnectedHero({
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-5">
             {content.title.split(content.titleAccent)[0]}
-            <span className="text-gradient-accent">{content.titleAccent}</span>
+            <span
+              className="bc-accent relative inline-block text-accent"
+              style={{
+                textShadow:
+                  "0 0 20px hsl(var(--accent) / 0.4), 0 0 40px hsl(var(--accent) / 0.2)",
+              }}
+            >
+              {content.titleAccent}
+              <span
+                className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-accent via-accent/70 to-accent/30"
+                style={{ bottom: "-4px" }}
+                aria-hidden="true"
+              />
+            </span>
           </h1>
 
           <div className="flex justify-center mb-6">
@@ -194,6 +207,7 @@ function ConnectedHowTo({ content }: { content: ConnectedContent["howTo"] }) {
             title={content.title}
             accent={content.accent}
             subtitle={content.subtitle}
+            tone="cta"
           />
         </div>
 
@@ -356,6 +370,7 @@ function ConnectedRankings({
             title={content.title}
             accent={content.accent}
             subtitle={content.subtitle}
+            tone="cta"
           />
         </div>
 
