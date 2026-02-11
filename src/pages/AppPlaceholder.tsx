@@ -112,7 +112,11 @@ function ConnectedHero({
           </h1>
 
           <div className="flex justify-center mb-6">
-            <Link to={`/${language}/app#how-to-play`} className="btn-bc btn-cta-primary btn-bc--lg">
+            <Link
+              to={`/${language}/app#how-to-play`}
+              className="btn-bc btn-cta-primary btn-bc--lg"
+              data-ui-sound="play"
+            >
               <Play className="h-4 w-4 btn-icon" />
               {content.cta}
             </Link>

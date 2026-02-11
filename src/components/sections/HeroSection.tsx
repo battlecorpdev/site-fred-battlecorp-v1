@@ -390,7 +390,11 @@ export function HeroSection() {
 
           {/* CTAs with premium buttons */}
           <div ref={ctaContainerRef} className="flex flex-col sm:flex-row gap-4 mb-10 will-change-transform">
-            <Link to={`/${language}/auth`} className="btn-bc btn-cta-primary btn-bc--md group">
+            <Link
+              to={`/${language}/auth`}
+              className="btn-bc btn-cta-primary btn-bc--md group"
+              data-ui-sound="play"
+            >
               {hero.cta}
               <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
