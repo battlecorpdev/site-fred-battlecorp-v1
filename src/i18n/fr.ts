@@ -456,10 +456,10 @@ export const fr: TranslationKeys = {
         tacticalAdvice: {
           label: "CONSEIL TACTIQUE",
           quotes: [
-            "« Votre QG est votre centre névralgique. Perdez-le, et la partie est terminée. »",
-            "« Un travailleur productif vaut plus que dix contribuables inactifs. »",
-            "« L'armée la mieux ravitaillée gagne la guerre, pas la bataille. »",
-            "« Pilonnez. Bombardez. Puis envahissez. »",
+            "Votre QG est votre centre névralgique. Perdez-le, et la partie est terminée.",
+            "Un travailleur productif vaut plus que dix contribuables inactifs.",
+            "L'armée la mieux ravitaillée gagne la guerre, pas la bataille.",
+            "Pilonnez. Bombardez. Puis envahissez.",
           ],
         },
         navigation: {
@@ -469,7 +469,7 @@ export const fr: TranslationKeys = {
         steps: [
           {
             title: "Sécurisez votre base",
-            description: "Votre QG est votre point vital. Sa perte signifie l’élimination immédiate.",
+            description: "Votre QG est votre point vital. Sa perte signifie l'élimination immédiate.",
             details: [
               "Territoire de départ = défaite si capturé",
               "Investissez dans la diplomacie, les défenses et garnisons",
