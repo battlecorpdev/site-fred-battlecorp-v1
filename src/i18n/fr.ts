@@ -1027,22 +1027,184 @@ export const fr: TranslationKeys = {
   },
   legal: {
     terms: {
-      title: "Conditions Générales d'Utilisation",
+      title: "Mentions légales et CGU",
       lastUpdate: "Dernière mise à jour:",
-      intro: "Les présentes conditions régissent l'utilisation de BattleCorp.",
-      body: "Contenu des CGU à compléter.",
+      intro: "Ce document regroupe les mentions légales et les conditions générales d'utilisation du site BattleCorp, conformément au droit français.",
+      body: `1. Éditeur du site
+Le site BattleCorp est édité par : BAD MARINES STUDIO, SAS, au capital de 5 000 €, immatriculée au RCS de BEZIERS sous le numéro 9029406830011, dont le siège social est situé 20 cours Lafayette, 34480 Saint-Genies-de-Fontedit, France.
+N° TVA intracommunautaire : FR61902940683
+Email de contact : julien.eballard@gmail.com
+Téléphone : Non communiqué
+
+2. Directeur de la publication
+Directeur de la publication : Julien Eballard
+Contact : julien.eballard@gmail.com
+
+3. Hébergeur
+Le site est hébergé par : OVH SAS, SAS, dont le siège social est situé 2 rue Kellermann, 59100 Roubaix, France, joignable au 1007 (depuis la France) ou +33 9 72 10 10 07 (depuis l'étranger).
+
+4. Objet du service
+BattleCorp propose un site vitrine et des services en ligne liés à un univers de jeu de stratégie multijoueur (actualités, accès bêta, compte utilisateur, pages d'information et support).
+L'accès à certaines fonctionnalités peut nécessiter la création d'un compte.
+
+5. Acceptation des CGU
+Toute utilisation du site implique l'acceptation pleine et entière des présentes conditions.
+Si vous n'acceptez pas ces conditions, vous ne devez pas utiliser le site ni ses services.
+
+6. Accès au site et au service
+Le site est accessible 24h/24 et 7j/7, sauf interruption programmée ou non pour maintenance, sécurité ou cas de force majeure.
+L'éditeur ne garantit pas une disponibilité continue et sans erreur.
+
+7. Compte utilisateur
+L'utilisateur s'engage à fournir des informations exactes et à jour lors de son inscription.
+L'utilisateur est responsable de la confidentialité de ses identifiants et de toute activité réalisée depuis son compte.
+En cas d'usage frauduleux, l'utilisateur doit informer l'éditeur sans délai.
+
+8. Règles d'usage et comportements interdits
+Il est notamment interdit de :
+- porter atteinte au bon fonctionnement du site (intrusion, surcharge, scripts malveillants) ;
+- usurper l'identité d'un tiers ;
+- publier ou transmettre des contenus illicites, diffamatoires, haineux, violents ou contraires à l'ordre public ;
+- exploiter commercialement tout ou partie du service sans autorisation écrite préalable.
+L'éditeur se réserve le droit de suspendre ou supprimer un compte en cas de manquement.
+
+9. Propriété intellectuelle
+L'ensemble des contenus présents sur le site (textes, graphismes, logos, vidéos, éléments visuels, marque BattleCorp, structure et code) est protégé par le droit de la propriété intellectuelle.
+Toute reproduction, représentation, adaptation ou exploitation, totale ou partielle, sans autorisation écrite préalable, est interdite.
+
+10. Limitation de responsabilité
+Les informations diffusées sur le site sont fournies à titre informatif et peuvent évoluer.
+L'éditeur ne pourra être tenu responsable des dommages directs ou indirects résultant de l'utilisation du site, d'une indisponibilité du service, ou d'un usage non conforme par l'utilisateur.
+
+11. Liens hypertextes
+Le site peut contenir des liens vers des sites tiers. L'éditeur n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu, politique de confidentialité ou pratiques.
+
+12. Données personnelles
+Les modalités de collecte et de traitement des données personnelles sont décrites dans la Politique de Confidentialité.
+L'utilisation de cookies est détaillée dans la Politique Cookies.
+
+13. Modification des conditions
+L'éditeur peut modifier à tout moment les présentes mentions légales et CGU.
+La version applicable est celle publiée sur le site à la date de consultation.
+
+14. Droit applicable et juridiction compétente
+Les présentes conditions sont soumises au droit français.
+À défaut d'accord amiable, tout litige relève des juridictions compétentes du ressort de Béziers, sauf disposition légale impérative contraire.
+
+15. Contact
+Pour toute question relative au site, aux CGU ou à vos droits, contactez-nous à : julien.eballard@gmail.com.`,
     },
     cookies: {
       title: "Politique des Cookies",
       lastUpdate: "Dernière mise à jour:",
-      intro: "Cette page explique comment BattleCorp utilise les cookies.",
-      body: "Contenu de la politique cookies à compléter.",
+      intro: "Cette politique explique comment BattleCorp utilise les cookies et technologies similaires, conformément au RGPD et aux recommandations de la CNIL.",
+      body: `1. Qu'est-ce qu'un cookie ?
+Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, mobile, tablette) lors de votre navigation.
+Il permet, selon sa nature, d'assurer le fonctionnement du site, de mesurer l'audience ou de personnaliser votre expérience.
+
+2. Responsable du traitement
+Le responsable du traitement est : BAD MARINES STUDIO, 20 cours Lafayette, 34480 Saint-Genies-de-Fontedit, France, contact : julien.eballard@gmail.com.
+
+3. Cookies utilisés sur le site
+BattleCorp peut utiliser les catégories suivantes :
+- Cookies strictement nécessaires : indispensables au fonctionnement technique du site (sécurité, session, préférences essentielles). Ces cookies ne nécessitent pas votre consentement.
+- Cookies de mesure d'audience : permettent de connaître la fréquentation et d'améliorer les performances du site.
+- Cookies de fonctionnalité : mémorisent certains choix d'interface (ex. langue, préférences d'affichage).
+- Cookies tiers éventuels : certains services externes (ex. vidéo, réseaux sociaux, analytics) peuvent déposer leurs propres cookies.
+
+4. Base légale
+Les cookies strictement nécessaires reposent sur l'intérêt légitime de l'éditeur.
+Les cookies non essentiels (audience, personnalisation, tiers) sont déposés uniquement avec votre consentement préalable.
+
+5. Gestion de votre consentement
+Lors de votre première visite, un bandeau vous permet d'accepter, refuser ou paramétrer les cookies non essentiels.
+Vous pouvez modifier votre choix à tout moment via le gestionnaire de consentement (lien "Paramètres cookies" à intégrer dans le footer).
+
+6. Durée de conservation
+La durée de vie des cookies est limitée à ce qui est strictement nécessaire au regard de leur finalité.
+Le choix de consentement/refus est conservé pour une durée maximale de 6 mois, sauf obligation légale différente.
+
+7. Liste détaillée des cookies
+La liste exacte (nom, finalité, fournisseur, durée) doit être tenue à jour par l'équipe technique dans le bandeau de consentement :
+- [COOKIE_NAME] - [FINALITÉ] - [DURÉE] - [FOURNISSEUR]
+- [COOKIE_NAME] - [FINALITÉ] - [DURÉE] - [FOURNISSEUR]
+
+8. Paramétrage navigateur
+Vous pouvez également configurer votre navigateur pour bloquer ou supprimer les cookies.
+Ce paramétrage peut altérer le fonctionnement de certaines fonctionnalités du site.
+
+9. Vos droits
+Conformément au RGPD, vous disposez de droits sur vos données (accès, rectification, effacement, limitation, opposition, portabilité).
+Pour exercer vos droits : julien.eballard@gmail.com.
+Vous pouvez aussi déposer une réclamation auprès de la CNIL : https://www.cnil.fr.
+
+10. Mise à jour de la politique
+La présente politique peut être modifiée à tout moment pour refléter les évolutions légales, réglementaires ou techniques.`,
     },
     privacy: {
       title: "Politique de Confidentialité",
       lastUpdate: "Dernière mise à jour:",
-      intro: "Cette page décrit comment nous collectons et utilisons vos données.",
-      body: "Contenu de la politique de confidentialité à compléter.",
+      intro: "Cette politique décrit comment BattleCorp collecte, utilise, conserve et protège vos données personnelles, conformément au RGPD (UE 2016/679) et à la loi Informatique et Libertés.",
+      body: `1. Responsable du traitement
+Le responsable du traitement est : BAD MARINES STUDIO, 20 cours Lafayette, 34480 Saint-Genies-de-Fontedit, France.
+Contact principal : julien.eballard@gmail.com
+Délégué à la protection des données (DPO), si applicable : julien.eballard@gmail.com
+
+2. Données collectées
+Nous pouvons collecter les catégories suivantes :
+- Données d'identification : email, pseudo, identifiant utilisateur.
+- Données de compte : mot de passe chiffré, préférences, langue.
+- Données de connexion et d'usage : logs techniques, adresse IP, informations appareil/navigateur, événements de navigation.
+- Données de support : contenu des messages envoyés via le support.
+- Données de paiement : si applicable, via prestataires sécurisés (BattleCorp ne stocke pas les numéros de carte en clair).
+
+3. Finalités et bases légales
+Vos données sont traitées pour :
+- Fournir le service et exécuter le contrat (création/gestion de compte, accès aux fonctionnalités).
+- Assurer la sécurité et prévenir la fraude (intérêt légitime).
+- Améliorer le produit et mesurer l'audience (consentement lorsque requis).
+- Gérer la relation utilisateur et le support (intérêt légitime / exécution du contrat).
+- Respecter nos obligations légales (obligation légale).
+
+4. Destinataires des données
+Les données sont accessibles uniquement aux personnes habilitées au sein de BattleCorp et à nos sous-traitants techniques (hébergement, analytics, support, emailing), dans la limite nécessaire à leurs missions.
+Chaque sous-traitant est contractuellement encadré pour garantir la confidentialité et la sécurité.
+
+5. Transferts hors Union européenne
+Si certains prestataires sont situés hors UE, les transferts sont encadrés par des garanties appropriées (clauses contractuelles types, décision d'adéquation ou mécanismes équivalents).
+
+6. Durées de conservation
+Les données sont conservées pendant une durée proportionnée à la finalité :
+- Données de compte : pendant la durée d'activité du compte, puis archivage/suppression selon obligations légales.
+- Données de logs : durée limitée nécessaire à la sécurité et au diagnostic.
+- Données de prospection : jusqu'au retrait du consentement ou à l'expiration légale applicable.
+Les durées exactes doivent être précisées dans le registre de traitements interne.
+
+7. Vos droits
+Vous disposez des droits suivants :
+- droit d'accès ;
+- droit de rectification ;
+- droit à l'effacement ;
+- droit à la limitation du traitement ;
+- droit d'opposition ;
+- droit à la portabilité ;
+- droit de retirer votre consentement à tout moment (sans effet rétroactif).
+Pour exercer vos droits, écrivez à : julien.eballard@gmail.com.
+Une preuve d'identité peut être demandée en cas de doute raisonnable.
+
+8. Réclamation auprès de l'autorité de contrôle
+Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la CNIL : https://www.cnil.fr.
+
+9. Sécurité
+BattleCorp met en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre l'accès non autorisé, l'altération, la divulgation ou la destruction.
+Malgré ces mesures, aucun système n'est totalement invulnérable.
+
+10. Mineurs
+Le service n'est pas destiné aux personnes ne remplissant pas les conditions d'âge prévues par la réglementation locale, sauf autorisation parentale lorsque la loi l'impose.
+
+11. Modification de la politique
+Cette politique peut être mise à jour à tout moment.
+La version en vigueur est celle publiée sur le site à la date de consultation.`,
     },
   },
 };

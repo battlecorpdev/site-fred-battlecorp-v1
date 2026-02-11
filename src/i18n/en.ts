@@ -621,22 +621,184 @@ export const en: TranslationKeys = {
   },
   legal: {
     terms: {
-      title: "Terms of Use",
+      title: "Legal Notice and Terms of Use",
       lastUpdate: "Last update:",
-      intro: "These terms govern the use of BattleCorp.",
-      body: "Terms of Use content will be published before launch.",
+      intro: "This document includes the legal notice and terms of use for the BattleCorp website.",
+      body: `1. Website publisher
+The BattleCorp website is published by: BAD MARINES STUDIO, SAS, with share capital of EUR 5,000, registered with the BEZIERS Trade and Companies Register under number 9029406830011, with registered office at 20 cours Lafayette, 34480 Saint-Genies-de-Fontedit, France.
+VAT number: FR61902940683
+Contact email: julien.eballard@gmail.com
+Phone: Not provided
+
+2. Publishing director
+Publishing director: Julien Eballard
+Contact: julien.eballard@gmail.com
+
+3. Hosting provider
+The website is hosted by: OVH SAS, SAS, with registered office at 2 rue Kellermann, 59100 Roubaix, France, reachable at 1007 (from France) or +33 9 72 10 10 07 (from abroad).
+
+4. Service purpose
+BattleCorp provides a showcase website and online services related to a multiplayer strategy game universe (news, beta access, user account, informational pages, and support).
+Access to certain features may require account creation.
+
+5. Acceptance of terms
+Any use of the website implies full and unconditional acceptance of these terms.
+If you do not accept these terms, you must not use the website or its services.
+
+6. Access to the website and service
+The website is available 24/7, except in case of planned or unplanned interruption for maintenance, security, or force majeure.
+The publisher does not guarantee continuous, error-free availability.
+
+7. User account
+Users agree to provide accurate and up-to-date information during registration.
+Users are responsible for keeping their credentials confidential and for all activity carried out through their account.
+In case of fraudulent use, users must notify the publisher without delay.
+
+8. Rules of use and prohibited behavior
+It is strictly prohibited to:
+- interfere with the proper operation of the website (intrusion, overload, malicious scripts);
+- impersonate any third party;
+- publish or transmit unlawful, defamatory, hateful, violent, or public-order-offending content;
+- commercially exploit all or part of the service without prior written authorization.
+The publisher reserves the right to suspend or delete an account in case of breach.
+
+9. Intellectual property
+All content available on the website (texts, graphics, logos, videos, visual assets, BattleCorp brand, structure, and code) is protected by intellectual property laws.
+Any reproduction, representation, adaptation, or exploitation, in whole or in part, without prior written authorization, is prohibited.
+
+10. Limitation of liability
+Information published on the website is provided for informational purposes and may change.
+The publisher shall not be liable for any direct or indirect damage resulting from use of the website, service unavailability, or non-compliant use by the user.
+
+11. Hyperlinks
+The website may contain links to third-party websites. The publisher has no control over such websites and disclaims any liability for their content, privacy practices, or policies.
+
+12. Personal data
+The collection and processing of personal data are described in the Privacy Policy.
+Cookie usage is described in the Cookie Policy.
+
+13. Changes to these terms
+The publisher may modify this legal notice and terms of use at any time.
+The applicable version is the one published on the website at the date of consultation.
+
+14. Governing law and jurisdiction
+These terms are governed by French law.
+In the absence of an amicable settlement, any dispute shall fall under the jurisdiction of the courts of Beziers, unless mandatory legal provisions state otherwise.
+
+15. Contact
+For any question regarding the website, these terms, or your rights, contact us at: julien.eballard@gmail.com.`,
     },
     cookies: {
       title: "Cookie Policy",
       lastUpdate: "Last update:",
-      intro: "This page explains how BattleCorp uses cookies.",
-      body: "Cookie Policy content will be published before launch.",
+      intro: "This policy explains how BattleCorp uses cookies and similar technologies, in accordance with GDPR and applicable French requirements.",
+      body: `1. What is a cookie?
+A cookie is a small text file stored on your device (computer, mobile, tablet) when visiting a website.
+Depending on its type, it can ensure website functionality, measure audience, or personalize your experience.
+
+2. Data controller
+The data controller is: BAD MARINES STUDIO, 20 cours Lafayette, 34480 Saint-Genies-de-Fontedit, France, contact: julien.eballard@gmail.com.
+
+3. Cookies used on this website
+BattleCorp may use the following categories:
+- Strictly necessary cookies: essential for technical operation of the website (security, session, core preferences). These cookies do not require consent.
+- Audience measurement cookies: used to understand traffic and improve website performance.
+- Functional cookies: used to remember interface choices (e.g. language, display preferences).
+- Third-party cookies: some external services (e.g. video, social media, analytics) may place their own cookies.
+
+4. Legal basis
+Strictly necessary cookies rely on the publisher's legitimate interest.
+Non-essential cookies (audience, personalization, third-party) are only placed with your prior consent.
+
+5. Managing your consent
+On your first visit, a cookie banner allows you to accept, refuse, or customize non-essential cookies.
+You can change your choice at any time via the consent manager (link "Cookie settings" to be added in the footer).
+
+6. Retention period
+Cookie lifespan is limited to what is strictly necessary for each purpose.
+Your consent/refusal choice is stored for a maximum of 6 months, unless a different legal obligation applies.
+
+7. Detailed cookie list
+The exact list (name, purpose, provider, duration) must be maintained by the technical team in the consent manager:
+- [COOKIE_NAME] - [PURPOSE] - [DURATION] - [PROVIDER]
+- [COOKIE_NAME] - [PURPOSE] - [DURATION] - [PROVIDER]
+
+8. Browser settings
+You can also configure your browser to block or delete cookies.
+Such settings may affect the proper functioning of some website features.
+
+9. Your rights
+Under GDPR, you have rights over your personal data (access, rectification, erasure, restriction, objection, portability).
+To exercise your rights: julien.eballard@gmail.com.
+You may also lodge a complaint with the CNIL: https://www.cnil.fr.
+
+10. Policy updates
+This policy may be updated at any time to reflect legal, regulatory, or technical changes.`,
     },
     privacy: {
       title: "Privacy Policy",
       lastUpdate: "Last update:",
-      intro: "This page describes how we collect and use your data.",
-      body: "Privacy Policy content will be published before launch.",
+      intro: "This policy explains how BattleCorp collects, uses, stores, and protects your personal data, in accordance with GDPR (EU 2016/679).",
+      body: `1. Data controller
+The data controller is: BAD MARINES STUDIO, 20 cours Lafayette, 34480 Saint-Genies-de-Fontedit, France.
+Main contact: julien.eballard@gmail.com
+Data Protection Officer (DPO), if applicable: julien.eballard@gmail.com
+
+2. Data collected
+We may collect the following categories:
+- Identification data: email, username, user identifier.
+- Account data: encrypted password, preferences, language.
+- Connection and usage data: technical logs, IP address, device/browser information, browsing events.
+- Support data: content of messages sent through support channels.
+- Payment data: if applicable, through secure payment providers (BattleCorp does not store raw card numbers).
+
+3. Purposes and legal bases
+Your data is processed to:
+- provide the service and perform the contract (account creation/management, feature access);
+- ensure security and prevent fraud (legitimate interest);
+- improve the product and measure audience (consent where required);
+- manage user relationship and support (legitimate interest / contract performance);
+- comply with legal obligations (legal obligation).
+
+4. Data recipients
+Data is accessible only to authorized BattleCorp personnel and technical processors (hosting, analytics, support, emailing), within the strict scope of their missions.
+Each processor is contractually bound to confidentiality and security obligations.
+
+5. Transfers outside the European Union
+If some providers are located outside the EU, transfers are framed by appropriate safeguards (standard contractual clauses, adequacy decisions, or equivalent mechanisms).
+
+6. Retention periods
+Data is retained for a period proportionate to each purpose:
+- Account data: for the duration of account activity, then archived/deleted according to legal obligations.
+- Log data: for a limited period necessary for security and diagnostics.
+- Marketing data: until consent withdrawal or expiry of applicable legal period.
+Exact retention schedules should be maintained in the internal processing register.
+
+7. Your rights
+You have the following rights:
+- right of access;
+- right to rectification;
+- right to erasure;
+- right to restriction of processing;
+- right to object;
+- right to data portability;
+- right to withdraw consent at any time (without retroactive effect).
+To exercise your rights, write to: julien.eballard@gmail.com.
+Proof of identity may be requested in case of reasonable doubt.
+
+8. Complaint to the supervisory authority
+If you believe your rights are not respected, you may lodge a complaint with the CNIL: https://www.cnil.fr.
+
+9. Security
+BattleCorp implements appropriate technical and organizational measures to protect your data against unauthorized access, alteration, disclosure, or destruction.
+Despite these measures, no system is fully invulnerable.
+
+10. Minors
+The service is not intended for individuals who do not meet the age requirements set by local law, unless parental authorization is provided where required.
+
+11. Policy changes
+This policy may be updated at any time.
+The version in force is the one published on the website on the consultation date.`,
     },
   },
 };
